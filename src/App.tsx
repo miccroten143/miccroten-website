@@ -81,7 +81,7 @@ function Header({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean
 function Logo() {
   return (
     <a href="#" className="flex items-center space-x-0 text-xl font-bold text-primary-700">
-      <img src="../assets/logo.png" alt="logo" height={"100px"} width={"100px"}/>
+      <img src="..public/assets/logo.png" alt="logo" height={"100px"} width={"100px"}/>
       <span>MICCROTEN</span>
     </a>
   );

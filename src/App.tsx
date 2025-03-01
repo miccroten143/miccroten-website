@@ -182,7 +182,7 @@ function Hero() {
             >
               <div className="animate-float">
                 <img 
-                  src="src/images/main_img.webp" 
+                  src="..public/assets/main_img.webp" 
                   alt="MICCROTEN Technology" 
                   className="rounded-xl shadow-2xl"
                   height={"500px"} width={'800px'}
@@ -359,13 +359,13 @@ const products = [
     icon: Radio,
     title: "Advanced RFID Solutions",
     description: "Our RFID technology offers seamless tracking and identification capabilities for inventory management, access control, and supply chain optimization.",
-    image: "src/images/rfid.jpg"
+    image: "..public/assets/rfid.jpg"
   },
   {
     icon: Activity,
     title: "Biomedical IoT Applications",
     description: "Our biomedical IoT solutions enable remote patient monitoring, medical device connectivity, and healthcare data analytics for improved patient outcomes.",
-    image: "src/images/bio-med.jpg"
+    image: "..public/assets/bio-med.jpg"
   }
 ];
 
@@ -680,7 +680,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-0 text-xl font-bold mb-4">
-              <img src="src/images/footer-logo.png" alt="" height={"80px"} width={"80px"} />
+              <img src="..public/assets/footer-logo.png" alt="" height={"80px"} width={"80px"} />
               <span>MICCROTEN</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md text-justify">

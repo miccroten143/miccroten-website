@@ -181,12 +181,7 @@ function Hero() {
               className="relative"
             >
               <div className="animate-float">
-                <img 
-                  src="/assets//main_img.webp" 
-                  alt="MICCROTEN Technology" 
-                  className="rounded-xl shadow-2xl"
-                  height={"500px"} width={'800px'}
-                />
+                <img src="/assets/images/main_img.webp" alt="MICCROTEN Technology" className="rounded-xl shadow-2xl" height="500px" width="800px" />
               </div>
               <div className="absolute -bottom-4 -left-4 h-24 w-24 bg-primary-500 rounded-lg opacity-20"></div>
               <div className="absolute -top-4 -right-0 h-24 w-24 bg-secondary-500 rounded-lg opacity-20"></div>

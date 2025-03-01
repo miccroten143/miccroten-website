@@ -680,7 +680,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-0 text-xl font-bold mb-4">
-              <img src="../public/assets/footer-logo.png" alt="" height={"80px"} width={"80px"} />
+              <img src="/assets/footer-logo.png" alt="" height={"80px"} width={"80px"} />
               <span>MICCROTEN</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md text-justify">

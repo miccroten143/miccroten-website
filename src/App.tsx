@@ -354,13 +354,13 @@ const products = [
     icon: Radio,
     title: "Advanced RFID Solutions",
     description: "Our RFID technology offers seamless tracking and identification capabilities for inventory management, access control, and supply chain optimization.",
-    image: "../public/assets/rfid.jpg"
+    image: "/assets/images/rfid.jpg"
   },
   {
     icon: Activity,
     title: "Biomedical IoT Applications",
     description: "Our biomedical IoT solutions enable remote patient monitoring, medical device connectivity, and healthcare data analytics for improved patient outcomes.",
-    image: "../public/assets/bio-med.jpg"
+    image: "/assets/images/bio-med.jpg"
   }
 ];
 
@@ -675,7 +675,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-0 text-xl font-bold mb-4">
-              <img src="/assets/footer-logo.png" alt="" height={"80px"} width={"80px"} />
+              <img src="/assets/footer-logo.png" alt="Footer Logo" height="80px" width="80px" />
               <span>MICCROTEN</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md text-justify">

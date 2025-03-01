@@ -181,7 +181,7 @@ function Hero() {
               className="relative"
             >
               <div className="animate-float">
-                <img src="/assets/logo.png" alt="logo" height="100" width="100" />
+                <img src="/assets/main-img.webp" alt="logo" height="100" width="100" />
               </div>
               <div className="absolute -bottom-4 -left-4 h-24 w-24 bg-primary-500 rounded-lg opacity-20"></div>
               <div className="absolute -top-4 -right-0 h-24 w-24 bg-secondary-500 rounded-lg opacity-20"></div>

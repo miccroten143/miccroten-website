@@ -31,7 +31,7 @@ function App() {
       <About />
       <Products />
       <Features />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>
@@ -46,7 +46,7 @@ function Header({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean
           <Logo/>
         </div>
         
-        <nav className="hidden md:flex items-center space-x-9">
+        <nav className="hidden md:flex items-center space-x-14">
           <NavLinks />
           <a href="#contact" className="btn btn-primary">Contact Us</a>
         </nav>
@@ -93,7 +93,6 @@ function NavLinks() {
       <a href="#about" className="text-gray-700 hover:text-primary-600 font-medium">About</a>
       <a href="#products" className="text-gray-700 hover:text-primary-600 font-medium">Products</a>
       <a href="#features" className="text-gray-700 hover:text-primary-600 font-medium">Features</a>
-      <a href="#testimonials" className="text-gray-700 hover:text-primary-600 font-medium">Testimonials</a>
     </>
   );
 }
@@ -360,13 +359,13 @@ const products = [
     icon: Radio,
     title: "Advanced RFID Solutions",
     description: "Our RFID technology offers seamless tracking and identification capabilities for inventory management, access control, and supply chain optimization.",
-    image: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    image: "src/images/rfid.jpg"
   },
   {
     icon: Activity,
     title: "Biomedical IoT Applications",
     description: "Our biomedical IoT solutions enable remote patient monitoring, medical device connectivity, and healthcare data analytics for improved patient outcomes.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    image: "src/images/bio-med.jpg"
   }
 ];
 
@@ -449,106 +448,83 @@ const features = [
   }
 ];
 
-function Testimonials() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+// function Testimonials() {
+//   const [ref, inView] = useInView({
+//     triggerOnce: true,
+//     threshold: 0.1,
+//   });
   
-  return (
-    <section id="testimonials" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <h2 className="section-title">Client <span className="text-gradient">Testimonials</span></h2>
-          <p className="section-subtitle">
-            Don't just take our word for it. Here's what our clients have to say about our products and services.
-          </p>
-        </motion.div>
+//   return (
+//     <section id="testimonials" className="py-20 bg-white">
+//       <div className="container mx-auto px-4">
+//         <motion.div
+//           ref={ref}
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+//           transition={{ duration: 0.5 }}
+//           className="text-center"
+//         >
+//           <h2 className="section-title">Client <span className="text-gradient">Testimonials</span></h2>
+//           <p className="section-subtitle">
+//             Don't just take our word for it. Here's what our clients have to say about our products and services.
+//           </p>
+//         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard 
-              key={index} 
-              name={testimonial.name} 
-              role={testimonial.role} 
-              company={testimonial.company}
-              quote={testimonial.quote}
-              image={testimonial.image}
-              delay={index * 0.1} 
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+//           {testimonials.map((testimonial, index) => (
+//             <TestimonialCard 
+//               key={index} 
+//               name={testimonial.name} 
+//               role={testimonial.role} 
+//               company={testimonial.company}
+//               quote={testimonial.quote}
+//               image={testimonial.image}
+//               delay={index * 0.1} 
+//             />
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
-function TestimonialCard({ name, role, company, quote, image, delay }: { 
-  name: string, 
-  role: string, 
-  company: string,
-  quote: string,
-  image: string,
-  delay: number 
-}) {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+// function TestimonialCard({ name, role, company, quote, image, delay }: { 
+//   name: string, 
+//   role: string, 
+//   company: string,
+//   quote: string,
+//   image: string,
+//   delay: number 
+// }) {
+//   const [ref, inView] = useInView({
+//     triggerOnce: true,
+//     threshold: 0.1,
+//   });
   
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.5, delay }}
-      className="card p-6"
-    >
-      <div className="flex items-center mb-4">
-        <img 
-          src={image} 
-          alt={name} 
-          className="w-12 h-12 rounded-full object-cover mr-4"
-        />
-        <div>
-          <h3 className="font-bold">{name}</h3>
-          <p className="text-sm text-gray-600">{role}, {company}</p>
-        </div>
-      </div>
-      <p className="text-gray-700 italic">"{quote}"</p>
-    </motion.div>
-  );
-}
+//   return (
+//     <motion.div
+//       ref={ref}
+//       initial={{ opacity: 0, y: 20 }}
+//       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+//       transition={{ duration: 0.5, delay }}
+//       className="card p-6"
+//     >
+//       <div className="flex items-center mb-4">
+//         <img 
+//           src={image} 
+//           alt={name} 
+//           className="w-12 h-12 rounded-full object-cover mr-4"
+//         />
+//         <div>
+//           <h3 className="font-bold">{name}</h3>
+//           <p className="text-sm text-gray-600">{role}, {company}</p>
+//         </div>
+//       </div>
+//       <p className="text-gray-700 italic">"{quote}"</p>
+//     </motion.div>
+//   );
+// }
 
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "CTO",
-    company: "HealthTech Inc.",
-    quote: "MICCROTEN's biomedical IoT solutions have revolutionized our patient monitoring systems. The reliability and accuracy of their technology is unmatched.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-  },
-  {
-    name: "Michael Chen",
-    role: "Operations Director",
-    company: "LogiTrack Systems",
-    quote: "Implementing MICCROTEN's RFID technology has increased our inventory accuracy by 99.8% and reduced processing time by 65%. A game-changer for our business.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Innovation Lead",
-    company: "FutureMed",
-    quote: "The team at MICCROTEN doesn't just provide products; they offer solutions. Their understanding of our needs and technical expertise has made them an invaluable partner.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-  }
-];
 
 function Contact() {
   const [ref, inView] = useInView({
@@ -652,14 +628,15 @@ function ContactInfo() {
             <Mail className="h-5 w-5 text-primary-600 mt-1 mr-3" />
             <div>
               <p className="font-medium">Email</p>
-              <p className="text-gray-600">info@miccroten.com</p>
+              <p className="text-gray-600">miccroten@gmail.com</p>
             </div>
           </div>
           <div className="flex items-start">
             <Phone className="h-5 w-5 text-primary-600 mt-1 mr-3" />
             <div>
               <p className="font-medium">Phone</p>
-              <p className="text-gray-600">+1 (555) 123-4567</p>
+              <p className="text-gray-600">+91 7795155237</p>
+              <p className="text-gray-600">+91 9207141737</p>
             </div>
           </div>
           <div className="flex items-start">
@@ -667,9 +644,8 @@ function ContactInfo() {
             <div>
               <p className="font-medium">Address</p>
               <p className="text-gray-600">
-                123 Tech Park Avenue<br />
-                Innovation District<br />
-                San Francisco, CA 94105
+                Bengaluru<br />
+                Karnataka,India
               </p>
             </div>
           </div>
@@ -701,13 +677,13 @@ function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 text-xl font-bold mb-4">
-              <Cpu className="h-6 w-6" />
+            <div className="flex items-center space-x-0 text-xl font-bold mb-4">
+              <img src="src/images/footer-logo.png" alt="" height={"80px"} width={"80px"} />
               <span>MICCROTEN</span>
             </div>
-            <p className="text-gray-400 mb-4 max-w-md">
+            <p className="text-gray-400 mb-4 max-w-md text-justify">
               Pioneering electronic development with cutting-edge RFID and Biomedical IoT solutions for a smarter, more connected world.
             </p>
             <div className="flex space-x-4">

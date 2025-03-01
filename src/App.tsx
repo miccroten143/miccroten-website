@@ -354,13 +354,13 @@ const products = [
     icon: Radio,
     title: "Advanced RFID Solutions",
     description: "Our RFID technology offers seamless tracking and identification capabilities for inventory management, access control, and supply chain optimization.",
-    image: "/assets/images/rfid.jpg"
+    image: "/assets/rfid.jpg"
   },
   {
     icon: Activity,
     title: "Biomedical IoT Applications",
     description: "Our biomedical IoT solutions enable remote patient monitoring, medical device connectivity, and healthcare data analytics for improved patient outcomes.",
-    image: "/assets/images/bio-med.jpg"
+    image: "/assets/bio-med.jpg"
   }
 ];
 

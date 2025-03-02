@@ -354,7 +354,7 @@ function ProductCard({ icon: Icon, title, description, image, delay }: {
 const products = [
   {
     icon: Radio,
-    title: "Advanced RFID Solutions",
+    title: "Advanced RFID Solutions with AI",
     description: "Our RFID technology offers seamless tracking and identification capabilities for inventory management, access control, and supply chain optimization.",
     image: "/assets/rfid.jpg"
   },

@@ -632,8 +632,8 @@ function ContactInfo() {
             <Phone className="h-5 w-5 text-primary-600 mt-1 mr-3" />
             <div>
               <p className="font-medium">Phone</p>
+              <p className="text-gray-600">+91 7795155237</p>  
               <p className="text-gray-600">+91 9207141737</p>
-              <p className="text-gray-600">+91 7795155237</p>              
             </div>
           </div>
           <div className="flex items-start">

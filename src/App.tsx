@@ -354,7 +354,7 @@ const products = [
     icon: Radio,
     title: "Advanced RFID Solutions with AI",
     description: "Our RFID technology offers seamless tracking and identification capabilities for inventory management, access control, and supply chain optimization.",
-    image: "/assets/rfid.jpg"
+    image: "https://www.shutterstock.com/image-illustration/rfid-radio-frequency-identification-technology-260nw-2423831619.jpg"
   },
   {
     icon: Activity,

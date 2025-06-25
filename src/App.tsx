@@ -786,7 +786,7 @@ function ContactInfo() {
             <Mail className="h-5 w-5 text-primary-600 mt-1 mr-3" />
             <div>
               <p className="font-medium">Email</p>
-              <p className="text-gray-600">miccroten@gmail.com</p>
+              <p className="text-gray-600">miccroten03@gmail.com</p>
             </div>
           </div>
           <div className="flex items-start">
@@ -802,7 +802,9 @@ function ContactInfo() {
             <div>
               <p className="font-medium">Address</p>
               <p className="text-gray-600">
-                Bengaluru<br />
+                New BEL Rd, Venkatachari Nagar <br />
+                R.M.V. Extension 2nd Stage, North Bengaluru<br />
+                Bengaluru-560094<br />
                 Karnataka,India
               </p>
             </div>

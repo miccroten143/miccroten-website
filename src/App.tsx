@@ -13,7 +13,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  Github,
+  Instagram,
   Linkedin,
   Twitter,
   Menu,
@@ -40,7 +40,7 @@ function App() {
 function Header({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean, setMobileMenuOpen: (open: boolean) => void }) {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-sm">
-      <div className="container mx-auto px-7 py-0 flex justify-between items-center">
+      <div className="container mx-auto px-7 py-0 flex justify-between items-center h-18">
         <div className="flex items-center">
           <Logo />
         </div>
@@ -78,8 +78,8 @@ function Header({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean
 
 function Logo() {
   return (
-    <a href="#" className="flex items-center space-x-0 text-xl font-bold text-primary-700">
-      <img src="/assets/logo.png" alt="logo" height={"100px"} width={"100px"} />
+    <a href="www.miccroten.com" className="flex items-center space-x-0 text-xl font-bold text-primary-700">
+      <img src="/assets/logo.png" alt="logo" mt-6 height={"110px"} width={"110px"} />
       <span>MICCROTEN Technologies</span>
     </a>
   );
@@ -340,10 +340,10 @@ function ProductCard({ icon: Icon, title, description, image, delay }: {
           <h3 className="text-xl font-bold">{title}</h3>
         </div>
         <p className="text-gray-600 mb-4">{description}</p>
-        <a href="#contact" className="text-primary-600 font-medium flex items-center hover:text-primary-700">
+        {/* <a href="#contact" className="text-primary-600 font-medium flex items-center hover:text-primary-700">
           Learn more
           <ChevronRight className="ml-1 h-4 w-4" />
-        </a>
+        </a> */}
       </div>
     </motion.div>
   );
@@ -847,14 +847,14 @@ function Footer() {
               Pioneering electronic development with cutting-edge RFID and Biomedical IoT solutions for a smarter, more connected world.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://x.com/Miccroten" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/miccroten" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="h-5 w-5" />
+              <a href="https://www.instagram.com/miccroten/" className="text-gray-400 hover:text-white transition-colors">
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -865,7 +865,7 @@ function Footer() {
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
               <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Products</a></li>
               <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+              {/* <li><a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">Testimonials</a></li> */}
               <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -873,10 +873,10 @@ function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Products</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">RFID Solutions</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Biomedical IoT</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Software Services</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Custom Development</a></li>
+              <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">RFID Solutions</a></li>
+              <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Biomedical IoT</a></li>
+              <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">IoT Applications with AI</a></li>
+              {/* <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Custom Development</a></li> */}
             </ul>
           </div>
         </div>

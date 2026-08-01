@@ -5,7 +5,7 @@ export default function CancellationPolicyPage() {
     <PolicyLayout
       title="Cancellation Policy"
       subtitle="Understanding how and when orders can be cancelled on the MICCROTEN store."
-      effectiveDate="1 January 2024"
+      effectiveDate="1 August 2026"
     >
       <PolicySection number={1} title="Introduction">
         <p>

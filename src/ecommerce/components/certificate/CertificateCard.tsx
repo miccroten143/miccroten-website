@@ -1,0 +1,3 @@
+interface CertificateCardProps {
+    certificate: Certificate;
+}

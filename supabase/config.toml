@@ -1,0 +1,39 @@
+
+[functions.create-razorpay-order]
+enabled = true
+verify_jwt = false
+import_map = "./functions/create-razorpay-order/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/create-razorpay-order/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/create-razorpay-order/*.html" ]
+
+[functions.shiprocket-estimate]
+enabled = true
+verify_jwt = false
+import_map = "./functions/shiprocket-estimate/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/shiprocket-estimate/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/shiprocket-estimate/*.html" ]
+
+[functions.shiprocket-create-order]
+enabled = true
+verify_jwt = false
+import_map = "./functions/shiprocket-create-order/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/shiprocket-create-order/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/shiprocket-create-order/*.html" ]
+
+[functions.shiprocket-courier-serviceability]
+enabled = true
+verify_jwt = false
+import_map = "./functions/shiprocket-courier-serviceability/deno.json"
+entrypoint = "./functions/shiprocket-courier-serviceability/index.ts"

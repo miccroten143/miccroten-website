@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MICCROTEN Technologies — E-Commerce Website
 
 A full-featured e-commerce platform for MICCROTEN Technologies Pvt. Ltd., specializing in RFID-based, biomedical IoT device development and AI-powered IoT solutions. The site includes a storefront with product catalog, cart, checkout, Razorpay payment integration, Shiprocket shipping, order tracking, an admin dashboard, and an internship certificate verification system.
@@ -718,3 +719,6 @@ Or deploy via the Supabase Dashboard.
 - All Edge Functions include the required CORS headers
 - If you see CORS errors, verify the Edge Function is deployed and includes the `corsHeaders` object
 - The headers must be present on all responses (success, error, and OPTIONS preflight)
+=======
+# miccroten-website
+>>>>>>> 5947fd286a62a072a06c847042a556ca85342e11

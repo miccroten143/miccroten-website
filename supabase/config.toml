@@ -1,0 +1,59 @@
+
+[functions.create-razorpay-order]
+enabled = true
+verify_jwt = false
+import_map = "./functions/create-razorpay-order/deno.json"
+entrypoint = "./functions/create-razorpay-order/index.ts"
+
+[functions.verify-razorpay-payment]
+enabled = true
+verify_jwt = false
+import_map = "./functions/verify-razorpay-payment/deno.json"
+entrypoint = "./functions/verify-razorpay-payment/index.ts"
+
+[functions.shiprocket-estimate]
+enabled = true
+verify_jwt = false
+import_map = "./functions/shiprocket-estimate/deno.json"
+entrypoint = "./functions/shiprocket-estimate/index.ts"
+
+[functions.shiprocket-create-order]
+enabled = true
+verify_jwt = false
+import_map = "./functions/shiprocket-create-order/deno.json"
+entrypoint = "./functions/shiprocket-create-order/index.ts"
+
+[functions.shiprocket-courier-serviceability]
+enabled = true
+verify_jwt = false
+import_map = "./functions/shiprocket-courier-serviceability/deno.json"
+entrypoint = "./functions/shiprocket-courier-serviceability/index.ts"
+
+[functions.shiprocket-track-order]
+enabled = true
+verify_jwt = false
+import_map = "./functions/shiprocket-track-order/deno.json"
+entrypoint = "./functions/shiprocket-track-order/index.ts"
+
+[functions.shiprocket-sync-tracking]
+enabled = true
+verify_jwt = false
+import_map = "./functions/shiprocket-sync-tracking/deno.json"
+entrypoint = "./functions/shiprocket-sync-tracking/index.ts"
+
+[functions.send-notification]
+enabled = true
+verify_jwt = false
+import_map = "./functions/send-notification/deno.json"
+entrypoint = "./functions/send-notification/index.ts"
+
+[functions.check-shipping]
+enabled = true
+verify_jwt = false
+import_map = "./functions/check-shipping/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/check-shipping/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/check-shipping/*.html" ]

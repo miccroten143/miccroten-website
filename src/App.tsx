@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
 import { useInView } from 'react-intersection-observer';
 import Typewriter from 'typewriter-effect';
 import { supabase } from '../src/Admin/lib/supabase';
@@ -24,6 +29,7 @@ import {
   Award,
 } from 'lucide-react';
 
+<<<<<<< HEAD
 import { IgnitionHomeSection } from './ecommerce/components/IgnitionHomeSection';
 
 function App() {
@@ -43,11 +49,31 @@ function App() {
       <Hero />
       <About />
       <IgnitionHomeSection />
+=======
+// const advertisementImages = [
+//   '/assets/IoT.jpg',
+//   '/assets/bio-med.jpg',
+//   '/assets/rfid.jpg',
+//   '/assets/IoT-img.jpg',
+//   '/assets/main_img.webp',
+// ];
+
+function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Header mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
+      <Hero />
+      {/* <AdvertisementMarquee /> */}
+      <About />
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
       <Products />
       <Features />
       <CertificateCTA />
       <Contact />
       <Footer />
+<<<<<<< HEAD
 
       {/* Popup Modal */}
       <AnimatePresence>
@@ -131,13 +157,18 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+=======
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
     </div>
   );
 }
 
+<<<<<<< HEAD
 // All other components remain unchanged from your original code.
 // They are included below for completeness.
 
+=======
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
 function Header({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean, setMobileMenuOpen: (open: boolean) => void }) {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-sm">
@@ -180,7 +211,11 @@ function Header({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean
 function Logo() {
   return (
     <a href="www.miccroten.com" className="flex items-center space-x-0 text-xl font-bold text-primary-700">
+<<<<<<< HEAD
       <img src="/assets/logo.png" alt="logo" height={"110px"} width={"110px"} />
+=======
+      <img src="/assets/logo.png" alt="logo" mt-6 height={"110px"} width={"110px"} />
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
       <span>MICCROTEN Technologies</span>
     </a>
   );
@@ -494,6 +529,13 @@ function ProductCard({ icon: Icon, title, description, image, delay }: {
           <h3 className="text-xl font-bold">{title}</h3>
         </div>
         <p className="text-gray-600 mb-4">{description}</p>
+<<<<<<< HEAD
+=======
+        {/* <a href="#contact" className="text-primary-600 font-medium flex items-center hover:text-primary-700">
+          Learn more
+          <ChevronRight className="ml-1 h-4 w-4" />
+        </a> */}
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
       </div>
     </motion.div>
   );
@@ -712,6 +754,153 @@ function Contact() {
   );
 }
 
+<<<<<<< HEAD
+=======
+// function ContactForm() {
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     email: '',
+//     subject: '',
+//     message: ''
+//   });
+//   const [status, setStatus] = useState({
+//     type: '',
+//     message: ''
+//   });
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     setFormData({
+//       ...formData,
+//       [e.target.id]: e.target.value
+//     });
+//   };
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
+//     setStatus({ type: '', message: '' });
+
+//     const templateParams = {
+//       from_name: formData.name,
+//       from_email: formData.email,
+//       subject: formData.subject,
+//       message: formData.message,
+//     };
+
+//     try {
+//       console.log('Sending email with params:', templateParams);
+//       const result = await emailjs.send(
+//         'service_3waj02d',
+//         'template_zo8bd07',
+//         templateParams
+//       );
+
+//       console.log('EmailJS response:', result);
+
+//       if (result.text === 'OK') {
+//         setStatus({
+//           type: 'success',
+//           message: 'Thank you for your message. We will get back to you soon!'
+//         });
+//         setFormData({ name: '', email: '', subject: '', message: '' });
+//       } else {
+//         throw new Error('Unexpected response from EmailJS');
+//       }
+//     } catch (error: any) {
+//       console.error('EmailJS detailed error:', {
+//         message: error.message,
+//         text: error.text,
+//         status: error.status,
+//         response: error.response
+//       });
+//       setStatus({
+//         type: 'error',
+//         message: error.text || 'There was an error sending your message. Please try again later.'
+//       });
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
+
+//   return (
+//     <div className="card p-6">
+//       <h3 className="text-xl font-bold mb-4">Send us a message</h3>
+//       <form onSubmit={handleSubmit} className="space-y-4">
+//         <div>
+//           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+//             Full Name
+//           </label>
+//           <input
+//             type="text"
+//             id="name"
+//             value={formData.name}
+//             onChange={handleChange}
+//             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
+//             placeholder="Your name"
+//             required
+//           />
+//         </div>
+//         <div>
+//           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+//             Email Address
+//           </label>
+//           <input
+//             type="email"
+//             id="email"
+//             value={formData.email}
+//             onChange={handleChange}
+//             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
+//             placeholder="your.email@example.com"
+//             required
+//           />
+//         </div>
+//         <div>
+//           <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+//             Subject
+//           </label>
+//           <input
+//             type="text"
+//             id="subject"
+//             value={formData.subject}
+//             onChange={handleChange}
+//             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
+//             placeholder="How can we help you?"
+//             required
+//           />
+//         </div>
+//         <div>
+//           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+//             Message
+//           </label>
+//           <textarea
+//             id="message"
+//             value={formData.message}
+//             onChange={handleChange}
+//             rows={4}
+//             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
+//             placeholder="Your message here..."
+//             required
+//           ></textarea>
+//         </div>
+//         {status.message && (
+//           <div className={`p-4 rounded-lg ${status.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+//             {status.message}
+//           </div>
+//         )}
+//         <button 
+//           type="submit" 
+//           className="btn btn-primary w-full"
+//           disabled={isSubmitting}
+//         >
+//           {isSubmitting ? 'Sending...' : 'Send Message'}
+//         </button>
+//       </form>
+//     </div>
+//   );
+// }
+
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -747,7 +936,12 @@ function ContactForm() {
           phone: formData.phone,
           subject: formData.subject,
           message: formData.message,
+<<<<<<< HEAD
           read: false
+=======
+          read: false  // Only include columns that exist in your table
+          // Removed 'private' column since it doesn't exist
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
         }]);
 
       if (error) throw error;
@@ -801,7 +995,11 @@ function ContactForm() {
           />
         </div>
         <div>
+<<<<<<< HEAD
           <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+=======
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
             Phone No.
           </label>
           <input
@@ -949,6 +1147,10 @@ function Footer() {
               <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Products</a></li>
               <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
               <li><a href="/verify" className="text-gray-400 hover:text-white transition-colors">Verify Certificate</a></li>
+<<<<<<< HEAD
+=======
+              {/* <li><a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">Testimonials</a></li> */}
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
               <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -959,6 +1161,10 @@ function Footer() {
               <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">RFID Solutions</a></li>
               <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Biomedical IoT</a></li>
               <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">IoT Applications with AI</a></li>
+<<<<<<< HEAD
+=======
+              {/* <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Custom Development</a></li> */}
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
             </ul>
           </div>
         </div>
@@ -979,4 +1185,8 @@ function Footer() {
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c

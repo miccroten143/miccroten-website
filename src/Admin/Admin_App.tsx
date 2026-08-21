@@ -12,8 +12,11 @@ const AdminProducts = React.lazy(() => import('./pages/AdminProducts'));
 const AdminOrders = React.lazy(() => import('./pages/AdminOrders'));
 const AdminCustomers = React.lazy(() => import('./pages/AdminCustomers'));
 const AdminCertificates = React.lazy(() => import('./pages/AdminCertificates'));
+<<<<<<< HEAD
 const AdminIgnitionGenerator = React.lazy(() => import('./pages/AdminIgnitionGenerator'));
 const AdminIgnitionDashboard = React.lazy(() => import('./pages/AdminIgnitionDashboard'));
+=======
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
@@ -59,8 +62,11 @@ function Admin_App() {
             <Route path="orders" element={<AdminOrders />} />
             <Route path="customers" element={<AdminCustomers />} />
             <Route path="certificates" element={<AdminCertificates />} />
+<<<<<<< HEAD
             <Route path="ignition/generate" element={<AdminIgnitionGenerator />} />
             <Route path="ignition/dashboard" element={<AdminIgnitionDashboard />} />
+=======
+>>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
             <Route path="*" element={<Navigate to="/admin/dashboard" replace />} />
           </Route>
         </Routes>

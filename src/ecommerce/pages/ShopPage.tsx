@@ -59,11 +59,7 @@ export default function ShopPage() {
   };
 
   const hasActiveFilters = categoryId || minPrice || maxPrice || searchParams.get('q');
-<<<<<<< HEAD
   
-=======
->>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
-
   return (
     <StoreLayout>
       {/* Hero banner */}

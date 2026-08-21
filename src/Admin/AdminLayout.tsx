@@ -1,11 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate, Outlet } from 'react-router-dom';
 import {
-<<<<<<< HEAD
   LayoutDashboard, Package, ShoppingCart, Users, LogOut, Menu, X, Settings, Award, Zap,
-=======
-  LayoutDashboard, Package, ShoppingCart, Users, LogOut, Menu, X, Settings, Award,
->>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
 } from 'lucide-react';
 import { useAuthStore } from './lib/store';
 import { useAuth } from '../ecommerce/AuthContext';
@@ -29,11 +25,8 @@ export default function AdminLayout() {
     { to: '/admin/orders', label: 'Orders', icon: ShoppingCart },
     { to: '/admin/customers', label: 'Customers', icon: Users },
     { to: '/admin/certificates', label: 'Intern Certificates', icon: Award },
-<<<<<<< HEAD
     { to: '/admin/ignition/dashboard', label: 'IGNITION 2K26', icon: Zap },
     { to: '/admin/ignition/generate', label: 'UID Generator', icon: Zap },
-=======
->>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
   ];
 
   const isActive = (path: string) => location.pathname === path || location.pathname.startsWith(path + '/');

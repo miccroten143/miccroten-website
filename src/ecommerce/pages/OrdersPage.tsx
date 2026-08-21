@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   CheckCircle2, Download, Truck, Package, MapPin, CreditCard, ChevronRight,
   ExternalLink, RefreshCw, Clock, Navigation,
@@ -9,13 +9,24 @@ import toast from 'react-hot-toast';
 import { StoreLayout } from '../components/StoreLayout';
 import { EmptyState } from '../components/EmptyState';
 import {
-  fetchOrderById, fetchOrders, fetchShipmentByOrder, fetchPaymentsByOrder,
+  fetchOrders, fetchShipmentByOrder, fetchPaymentsByOrder,
   fetchTrackingEvents, syncTrackingFromBackend,
 } from '../services';
 import { useAuth } from '../AuthContext';
 import { formatINR, formatDateTime, formatDate } from '../utils';
 import { supabase } from '../../Admin/lib/supabase';
 import type { Order, Shipment, Payment, TrackingEvent } from '../types';
+
+// Define the shape of the address object
+interface Address {
+  full_name: string;
+  line1: string;
+  line2?: string;
+  city: string;
+  state: string;
+  pincode: string;
+  phone: string;
+}
 
 const TIMELINE_STEPS = [
   { key: 'order_placed', label: 'Order Placed' },
@@ -255,6 +266,9 @@ Payment ID: ${order.razorpay_payment_id ?? 'N/A'}
     ? STEP_INDEX[shipment.shipment_status] ?? 1
     : STEP_INDEX[order.status] ?? 0;
 
+  // Cast address to our Address interface
+  const address = order.address as Address;
+
   return (
     <StoreLayout>
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
@@ -302,11 +316,11 @@ Payment ID: ${order.razorpay_payment_id ?? 'N/A'}
               <div className="bg-white rounded-xl shadow-md p-6">
                 <h2 className="font-bold text-gray-900 mb-3 flex items-center gap-2"><MapPin size={20} /> Delivery Address</h2>
                 <p className="text-gray-600 text-sm">
-                  {(order.address as Record<string, string>).full_name}<br />
-                  {(order.address as Record<string, string>).line1}
-                  {(order.address as Record<string, string>).line2 ? `, ${(order.address as Record<string, string>).line2}` : ''}<br />
-                  {(order.address as Record<string, string>).city}, {(order.address as Record<string, string>).state} - {(order.address as Record<string, string>).pincode}<br />
-                  {(order.address as Record<string, string>).phone}
+                  {address.full_name}<br />
+                  {address.line1}
+                  {address.line2 ? `, ${address.line2}` : ''}<br />
+                  {address.city}, {address.state} - {address.pincode}<br />
+                  {address.phone}
                 </p>
               </div>
             )}
@@ -348,7 +362,6 @@ Payment ID: ${order.razorpay_payment_id ?? 'N/A'}
               <TrackingTimeline
                 currentStep={currentStepIdx}
                 events={trackingEvents}
-                shipment={shipment}
                 orderCreatedAt={order.created_at}
               />
 
@@ -423,11 +436,10 @@ Payment ID: ${order.razorpay_payment_id ?? 'N/A'}
 }
 
 function TrackingTimeline({
-  currentStep, events, shipment, orderCreatedAt,
+  currentStep, events, orderCreatedAt,
 }: {
   currentStep: number;
   events: TrackingEvent[];
-  shipment: Shipment | null;
   orderCreatedAt: string;
 }) {
   return (

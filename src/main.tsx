@@ -2,11 +2,8 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import { Toaster } from 'react-hot-toast';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
-=======
->>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
 
 import App from './App';
 import Admin_App from './Admin/Admin_App';
@@ -14,7 +11,6 @@ import { AuthProvider } from './ecommerce/AuthContext';
 import { ErrorBoundary } from './ecommerce/components/ErrorBoundary';
 import CheckEmail from './ecommerce/pages/CheckEmail';
 import AuthCallback from "./ecommerce/pages/AuthCallback";
-<<<<<<< HEAD
 
 import './index.css';
 
@@ -53,14 +49,6 @@ function PageLoader({ text = 'Loading...' }: { text?: string }) {
 
 // Lazy imports
 const LazyShop = lazyWithDelay(() => import('./ecommerce/pages/ShopPage'), 1000);
-=======
-import VerifyCertificate from "./ecommerce/pages/VerifyCertificate";
-
-import './index.css';
-
-// Lazy imports
-const LazyShop = React.lazy(() => import('./ecommerce/pages/ShopPage'));
->>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
 const LazyCategory = React.lazy(() => import('./ecommerce/pages/CategoryPage'));
 const LazyProduct = React.lazy(() => import('./ecommerce/pages/ProductDetailPage'));
 const LazyCart = React.lazy(() => import('./ecommerce/pages/CartPage'));
@@ -76,21 +64,13 @@ const LazyTerms = React.lazy(() => import('./ecommerce/pages/TermsPage'));
 const LazyRefundPolicy = React.lazy(() => import('./ecommerce/pages/RefundPolicyPage'));
 const LazyCancellationPolicy = React.lazy(() => import('./ecommerce/pages/CancellationPolicyPage'));
 const LazyCertificateVerification = React.lazy(() => import('./ecommerce/pages/CertificateVerificationPage'));
-<<<<<<< HEAD
 const LazyIgnition = React.lazy(() => import('./ecommerce/pages/IgnitionPage'));
-const LazyVerifyCertificate = React.lazy(() => import('./ecommerce/pages/VerifyCertificate'));
-=======
->>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
 
 createRoot(document.getElementById('root')!).render(
   <ErrorBoundary>
     <AuthProvider>
       <BrowserRouter>
-<<<<<<< HEAD
         <Suspense fallback={<PageLoader text="Just a moment..." />}>
-=======
-        <Suspense fallback={<div>Loading...</div>}>
->>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/shop" element={<LazyShop />} />
@@ -112,14 +92,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/refund-policy" element={<LazyRefundPolicy />} />
             <Route path="/cancellation-policy" element={<LazyCancellationPolicy />} />
             <Route path="/verify" element={<LazyCertificateVerification />} />
-<<<<<<< HEAD
             <Route path="/event" element={<LazyIgnition />} />
-=======
-            <Route
-              path="/verify"
-              element={<VerifyCertificate />}
-            />
->>>>>>> ee3a180bd90ef2a3c7d30e2c531edee64609b58c
             <Route path="/admin/*" element={<Admin_App />} />
           </Routes>
         </Suspense>

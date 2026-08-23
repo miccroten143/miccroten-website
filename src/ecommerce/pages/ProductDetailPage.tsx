@@ -148,7 +148,7 @@ export default function ProductDetailPage() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </AnimatePresence>
               <button

@@ -145,7 +145,19 @@ export function IgnitionHomeSection() {
             </div>
             <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-gray-400/15 to-gray-500/10 border border-gray-300/30 backdrop-blur-md">
               <Trophy className="h-6 w-6 text-gray-300" />
-              <span className="text-lg font-bold text-gray-200">2nd Prize — ₹50,000</span>
+              <span className="text-lg font-bold text-gray-200">2nd Prize — ₹75,000</span>
+            </div>
+            <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500/15 to-orange-600/10 border border-orange-400/30 backdrop-blur-md">
+              <Trophy className="h-6 w-6 text-orange-400" />
+              <span className="text-lg font-bold text-orange-300">3rd Prize — ₹50,000</span>
+            </div>
+            <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500/15 to-sky-600/10 border border-sky-400/30 backdrop-blur-md">
+              <Trophy className="h-6 w-6 text-sky-400" />
+              <span className="text-lg font-bold text-sky-300">4th Prize — ₹35,000</span>
+            </div>
+            <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500/15 to-emerald-600/10 border border-emerald-400/30 backdrop-blur-md">
+              <Trophy className="h-6 w-6 text-emerald-400" />
+              <span className="text-lg font-bold text-emerald-300">5th Prize — ₹25,000</span>
             </div>
           </motion.div>
 
@@ -167,7 +179,7 @@ export function IgnitionHomeSection() {
             </motion.a>
 
             <motion.a
-              href="/shop"
+              href="/product/11"
               animate={{ scale: [1, 1.14, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
               whileHover={{ scale: 1.28 }}

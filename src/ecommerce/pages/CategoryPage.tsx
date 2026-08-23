@@ -62,7 +62,7 @@ export default function CategoryPage() {
           <img
             src={category.image_url}
             alt={category.name}
-            className="absolute inset-0 w-full h-full object-cover opacity-30"
+            className="absolute inset-0 w-full h-full object-contain opacity-30"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-transparent" />

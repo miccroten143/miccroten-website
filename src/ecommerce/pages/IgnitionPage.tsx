@@ -150,9 +150,12 @@ function HowItWorks() {
 
 function PrizeSection() {
   const prizes = [
-    { emoji: '🏆', label: '1st PRIZE', amount: '₹1,00,000', color: 'from-amber-500/20 to-amber-600/10', border: 'border-amber-400/30', text: 'text-amber-300' },
-    { emoji: '🥈', label: '2nd PRIZE', amount: '₹50,000', color: 'from-gray-400/20 to-gray-500/10', border: 'border-gray-300/30', text: 'text-gray-200' },
-  ];
+  { emoji: '🏆', label: '1st PRIZE', amount: '₹1,00,000', color: 'from-amber-500/20 to-amber-600/10', border: 'border-amber-400/30', text: 'text-amber-300' },
+  { emoji: '🥈', label: '2nd PRIZE', amount: '₹75,000', color: 'from-gray-400/20 to-gray-500/10', border: 'border-gray-300/30', text: 'text-gray-200' },
+  { emoji: '🥉', label: '3rd PRIZE', amount: '₹50,000', color: 'from-orange-500/20 to-orange-600/10', border: 'border-orange-400/30', text: 'text-orange-300' },
+  { emoji: '🎖️', label: '4th PRIZE', amount: '₹35,000', color: 'from-sky-500/20 to-sky-600/10', border: 'border-sky-400/30', text: 'text-sky-300' },
+  { emoji: '🎗️', label: '5th PRIZE', amount: '₹25,000', color: 'from-emerald-500/20 to-emerald-600/10', border: 'border-emerald-400/30', text: 'text-emerald-300' },
+];
   return (
     <section className="py-20 bg-gray-950/60 backdrop-blur-sm">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -196,7 +199,7 @@ function HowToParticipate() {
                 <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
                 {step.note && <p className="mt-2 text-sm text-amber-400 bg-amber-500/10 inline-block px-3 py-1 rounded-lg">{step.note}</p>}
                 {step.cta && (
-                  <a href="/shop" className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 shadow-lg shadow-primary-500/30 transition-all text-sm">
+                  <a href="/product/11" className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 shadow-lg shadow-primary-500/30 transition-all text-sm">
                     <ShoppingBag size={16} /> ORDER YOUR KIT <ArrowRight size={14} />
                   </a>
                 )}
@@ -336,7 +339,7 @@ function FinalCTA() {
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-2xl md:text-4xl font-bold font-poppins text-white mb-4">READY TO TAKE THE <span className="text-gradient">CHALLENGE?</span></motion.h2>
         <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-gray-300 mb-8">Get the kit. Build your idea. Compete for ₹1,00,000.</motion.p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <motion.a href="/shop" animate={{ scale: [1, 1.04, 1] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }} whileHover={{ scale: 1.08 }} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-primary-600 to-primary-500 shadow-lg shadow-primary-500/40 transition-all"><ShoppingBag className="h-5 w-5" /> ORDER YOUR KIT</motion.a>
+          <motion.a href="/product/11" animate={{ scale: [1, 1.04, 1] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }} whileHover={{ scale: 1.08 }} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-primary-600 to-primary-500 shadow-lg shadow-primary-500/40 transition-all"><ShoppingBag className="h-5 w-5" /> ORDER YOUR KIT</motion.a>
           <motion.a href="#ignition-register" whileHover={{ scale: 1.05 }} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-primary-200 bg-white/10 backdrop-blur-md border border-primary-400/30 hover:bg-white/15 transition-all"><Zap className="h-5 w-5" /> REGISTER NOW</motion.a>
         </div>
       </div>
